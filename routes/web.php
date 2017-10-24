@@ -36,4 +36,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/nouvel_enfant', 'ParentController@showFormAddChild')->name('nouvelEnfant');
     Route::post('/nouvel_enfant', 'ParentController@addChild')->name('nouvelEnfant');
     Route::get('/enfant/{pseudo}','ParentController@chooseChild')->name('enfant');
+    Route::post('/enfant/{pseudo}/addToken/red','ParentController@addRedToken')->name('redToken');
+    Route::post('/enfant/{pseudo}/addToken/green','ParentController@addGreenToken')->name('greenToken');
 });

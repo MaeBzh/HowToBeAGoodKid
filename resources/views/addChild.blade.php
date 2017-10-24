@@ -15,7 +15,7 @@
                                 <label for="prenom" class="col-md-4 control-label">Prénom</label>
 
                                 <div class="col-md-6">
-                                    <input id="prenom" type="text" class="form-control" name="prenom"  required autofocus>
+                                    <input id="prenom" type="text" class="form-control" name="prenom" value="{{old('prenom')}}"  required autofocus>
 
                                     @if ($errors->has('prenom'))
                                         <span class="help-block">
@@ -28,7 +28,7 @@
                                 <label for="pseudo" class="col-md-4 control-label">Pseudo</label>
 
                                 <div class="col-md-6">
-                                    <input id="pseudo" type="text" class="form-control" name="pseudo"  required autofocus>
+                                    <input id="pseudo" type="text" class="form-control" name="pseudo" value="{{old('pseudo')}}"  required autofocus>
 
                                     @if ($errors->has('pseudo'))
                                         <span class="help-block">
@@ -42,7 +42,7 @@
                                 <label for="date_naissance" class="col-md-4 control-label">Date de naissance</label>
 
                                 <div class="col-md-6">
-                                    <input id="date_naissance" type="date" class="form-control" name="date_naissance" required autofocus>
+                                    <input id="date_naissance" type="date" class="form-control" name="date_naissance" value="{{old('date_naissance')}}" required autofocus>
 
                                     @if ($errors->has('date_naissance'))
                                         <span class="help-block">
@@ -56,9 +56,9 @@
                                 <label for="sexe" class="col-md-4 control-label">Sexe</label>
 
                                 <div class="col-md-6">
-                                    <select class="custom-select" name="sexe" id="sexe">
-                                        <option value="fille" selected>Fille</option>
-                                        <option value="garcon" >Garçon</option>
+                                    <select class="custom-select" name="sexe" id="sexe" required>
+                                        <option value="fille" @if(old('sexe')=="fille") selected @endif>Fille</option>
+                                        <option value="garcon" @if(old('sexe')=="garcon") selected @endif >Garçon</option>
                                     </select>
                                     @if ($errors->has('sexe'))
                                         <span class="help-block">

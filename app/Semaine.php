@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Jeton extends Model
+class Semaine extends Model
 {
-    protected $table = 'jetons';
+    protected $table = 'semaines';
 
     public function enfant(){
         return $this->belongsTo('App\Enfant');

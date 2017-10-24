@@ -12,8 +12,8 @@ class Enfant extends Model
         'prenom', 'pseudo', 'date_naissance', 'sexe', 'parent_id',
     ];
 
-    public function jetons(){
-        return $this->hasMany('App\Jeton', 'enfant_id', 'id');
+    public function semaines(){
+        return $this->hasMany('App\Semaine', 'enfant_id', 'id');
     }
 
     public function parent(){
