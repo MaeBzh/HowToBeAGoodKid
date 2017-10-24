@@ -27,8 +27,8 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function jetons(){
-        return $this->hasMany('App\Jeton', 'parent_id', 'id');
+    public function semaines(){
+        return $this->hasMany('App\Semaine', 'parent_id', 'id');
 
     }
 

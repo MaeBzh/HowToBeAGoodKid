@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateJetonsTable extends Migration
+class CreateSemainesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateJetonsTable extends Migration
      */
     public function up()
     {
-        Schema::create('jetons', function (Blueprint $table) {
+        Schema::create('semaines', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('num_semaine');
             $table->integer('nb_vert');
@@ -33,6 +33,6 @@ class CreateJetonsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('jetons');
+        Schema::dropIfExists('semaines');
     }
 }
